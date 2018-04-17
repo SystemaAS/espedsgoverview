@@ -92,7 +92,7 @@ public class DashboardController {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping(value="logonDashboard.do", method= { RequestMethod.POST})
+	@RequestMapping(value="logonDashboard.do", method= { RequestMethod.POST, RequestMethod.GET})
 	public ModelAndView logon(@ModelAttribute (AppConstants.SYSTEMA_WEB_USER_KEY) SystemaWebUser appUser, BindingResult bindingResult, HttpSession session, HttpServletRequest request, HttpServletResponse response, RedirectAttributes redirectAttr){
 		ModelAndView successView = new ModelAndView("redirect:uoppdraggate.do?deepSubmit=do");
 		//Adjust to overview login --> sendinger...
