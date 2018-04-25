@@ -43,7 +43,7 @@ public class GeneralDistributionChart {
 	private static final String FILE_TYPE_PNG = ".png";
 	private static final String FILE_TYPE_JPEG = ".jpg";
 	//chart dimensions
-	private static final int CHART_WIDTH = 1000;
+	private static final int CHART_WIDTH = 1300;
     private static final int CHART_HEIGHT = 430; //max(440) since the monitor/display otherwise would have to scroll after each refresh...
     
 	

@@ -5,11 +5,11 @@
 <jsp:include page="/WEB-INF/views/headerUoppdrag.jsp" />
 <!-- =====================end header ==========================-->
 
-<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 	<tr>
 		<td>
 		<%-- tab container component --%>
-		<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+		<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 			<tr height="2"><td></td></tr>
 			<tr height="25"> 
 				<td width="20%" valign="bottom" class="tabDisabled" align="center">
@@ -68,15 +68,17 @@
 			<tr>
 				<td>
 				<table width="100%" cellspacing="0" border="0" cellpadding="0">
+					<thead>
 					<tr class="tableHeaderField" height="20" valign="left">
-	                    <td class="tableHeaderFieldFirst">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.fbr"/>&nbsp;</td> 
-	                    <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.date"/>&nbsp;</td>
-	                    <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.time"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.event"/>&nbsp;</td> 
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.text"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.user"/></td> 
+	                    <th class="tableHeaderFieldFirst">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.fbr"/>&nbsp;</th> 
+	                    <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.date"/>&nbsp;</th>
+	                    <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.time"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.event"/>&nbsp;</th> 
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.text"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.logging.list.label.user"/></th> 
 	               </tr> 
-	               
+	               </thead>
+	               <tbody>
 		           	<c:forEach items="${list}" var="record" varStatus="counter">    
 		               <c:choose>           
 		                   <c:when test="${counter.count%2==0}">
@@ -94,7 +96,7 @@
 		               <td class="tableCell" >&nbsp;${record.user}</td>
 		            </tr> 
 		            </c:forEach>
-	               
+	               </tbody>
 		                 
 	            </table>
 			</td>	

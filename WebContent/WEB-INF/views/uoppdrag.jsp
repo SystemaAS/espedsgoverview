@@ -9,11 +9,11 @@
 		specified in servlet.xml as static <mvc:resources mapping="/resources/**" location="WEB-INF/resources/" order="1"/> --%>
 	<SCRIPT type="text/javascript" src="resources/js/uoppdrag.js?ver=${user.versionEspedsg}"></SCRIPT>
 	
-<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 <tr>
 	<td>
 	<%-- tab container component --%>
-	<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+	<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 		<tr height="2"><td></td></tr>
 		<tr height="25">
 			<td width="20%" valign="bottom" class="tabDisabled" align="center">
@@ -27,7 +27,7 @@
 			<td width="20%" valign="bottom" class="tab" align="center">
 				<c:choose>
 				<c:when test="${not empty model.listType}">
-					<font class="text12"><spring:message code="systema.overview.uoppdrag.intervalprefix.tab"/></font>&nbsp;&nbsp;<font class="text12Bold">[${model.listInterval}]</font>
+					<font class="text14"><spring:message code="systema.overview.uoppdrag.intervalprefix.tab"/></font>&nbsp;&nbsp;<font class="text14Bold">[${model.listInterval}]</font>
 					&nbsp;&nbsp;&nbsp;				
 					<input class="inputFormSubmitUoppNeutralR" type="submit" name="totalButton" value='${model.listSize}'/>
 				</c:when>
@@ -55,16 +55,16 @@
 		 	        	<input type="hidden" name="llim" id="llim" value='${model.llim}'>
 		 	        	<input type="hidden" name="ulim" id="ulim" value='${model.ulim}'>
 		 	        	<tr>	
-			 	        <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.date"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.tar"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.avd"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.topicNr"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.sign"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.extref"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.handelsFakt"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.godsNr"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.status"/></td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.mark"/></td>
+			 	        <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.date"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.tar"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.avd"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.topicNr"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.sign"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.extref"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.handelsFakt"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.godsNr"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.status"/></td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.mark"/></td>
 		                
 		            </tr>
 		            <tr>
@@ -105,14 +105,14 @@
 					</tr>
 	            	    <tr height="5"><td></td></tr>
 					<tr>	
-						<td class="text12" colspan="4">&nbsp;&nbsp;
+						<td class="text14" colspan="4">&nbsp;&nbsp;
 						<%-- <c:if test="${not empty model.searchFilterGateChar.antHfaktFlag}"> disabled </c:if>  --%>
-							<select <c:if test="${not empty model.searchFilterGateChar.antHfaktFlag}"> disabled </c:if> class="text11" id="antHfaktFlag" name="antHfaktFlag">
+							<select <c:if test="${not empty model.searchFilterGateChar.antHfaktFlag}"> disabled </c:if> class="text14" id="antHfaktFlag" name="antHfaktFlag">
 		        					<option  style="font-style:italic;" value="">HandelsFakt - Alle</option>
 	        						<option value="Y" <c:if test="${model.searchFilter.antHfaktFlag == 'Y' || model.searchFilterGateChar.antHfaktFlag =='Y'}"> selected </c:if>  >Med skannet HF</option>
 	        						<option value="N" <c:if test="${model.searchFilter.antHfaktFlag == 'N' || model.searchFilterGateChar.antHfaktFlag =='N'}"> selected </c:if>  >Uten skannet HF</option>
 							</select>&nbsp;
-							<select <c:if test="${not empty model.searchFilterGateChar.statusFlag}"> disabled </c:if>  class="text11" id="statusFlag" name="statusFlag">
+							<select <c:if test="${not empty model.searchFilterGateChar.statusFlag}"> disabled </c:if>  class="text14" id="statusFlag" name="statusFlag">
 		        					<option  style="font-style:italic;" value="">Status - Alle</option>
 	        						<option value="N" <c:if test="${model.searchFilter.statusFlag == 'N' || model.searchFilterGateChar.statusFlag =='N'}"> selected </c:if>  > Ikke påbegynt</option>
 	        						<option value="Y" <c:if test="${model.searchFilter.statusFlag == 'Y' || model.searchFilterGateChar.statusFlag =='Y'}"> selected </c:if>  > Påbegynt</option>
@@ -141,10 +141,11 @@
 	 	 </table>
  	     <table width="100%" cellspacing="0" border="0" cellpadding="0">   
 			 <tr height="1"><td colspan="5"></td></tr>
-      			
-    			  <tr class="tableHeaderField" height="20" valign="left">
-                 <td class="tableHeaderFieldFirst" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.date"/>&nbsp;</td>
-                 <td nowrap class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.dager"/>&nbsp;
+      		
+      		 <thead>	
+    		 <tr class="tableHeaderField" height="20" valign="left">
+                 <th class="tableHeaderFieldFirst" align="center">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.date"/>&nbsp;</th>
+                 <th nowrap class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.dager"/>&nbsp;
                  	<c:choose>
                  	<c:when test="${empty model.sortCol || model.sortCol == 'dager'}">
 	                 	<a href="uoppdragSortByColumn.do?uoType=${model.listType}&col=dager&sort=${model.imgSortPng}&llim=${model.llim}&ulim=${model.ulim}">
@@ -157,8 +158,8 @@
 	                		</a>                		
                 		</c:otherwise>
 					</c:choose>
-                 </td>   
-                 <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.tar"/>
+                 </th>   
+                 <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.tar"/>
                  	<c:choose>
                  	<c:when test="${model.sortCol == 'tariffor'}">
 	                 	<a href="uoppdragSortByColumn.do?uoType=${model.listType}&col=tariffor&sort=${model.imgSortPng}&llim=${model.llim}&ulim=${model.ulim}">
@@ -171,8 +172,8 @@
 	                		</a>
                 		</c:otherwise>
 					</c:choose>
-                 </td>
-                 <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.avd"/>&nbsp;
+                 </th>
+                 <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.avd"/>&nbsp;
                  	<c:choose>
                  	<c:when test="${model.sortCol == 'avd'}">
 	                 	<a href="uoppdragSortByColumn.do?uoType=${model.listType}&col=avd&sort=${model.imgSortPng}&llim=${model.llim}&ulim=${model.ulim}">
@@ -185,9 +186,9 @@
 	                		</a>
                 		</c:otherwise>
 					</c:choose>
-                 </td>
-                 <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.topicNr"/>&nbsp;</td>
-                 <td nowrap class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.sign"/>
+                 </th>
+                 <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.topicNr"/>&nbsp;</th>
+                 <th nowrap class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.sign"/>
                  	<c:choose>
                  	<c:when test="${model.sortCol == 'sign'}">
 	                 	<a href="uoppdragSortByColumn.do?uoType=${model.listType}&col=sign&sort=${model.imgSortPng}&llim=${model.llim}&ulim=${model.ulim}">
@@ -200,8 +201,8 @@
 	                		</a>
                 		</c:otherwise>
 					</c:choose>
-                 </td>
-                 <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.extref"/>
+                 </th>
+                 <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.extref"/>
 					<c:choose>
                  	<c:when test="${model.sortCol == 'extRef'}">
 	                 	<a href="uoppdragSortByColumn.do?uoType=${model.listType}&col=extRef&sort=${model.imgSortPng}&llim=${model.llim}&ulim=${model.ulim}">
@@ -215,12 +216,12 @@
                 		</c:otherwise>
 					</c:choose>                 
                  
-                 </td>
-                 <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.handelsFakt"/></td>
-                 <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.receiver"/></td>
-                 <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.kll"/></td>
-                 <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.weight"/></td>
-                 <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.godsNr"/>
+                 </th>
+                 <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.handelsFakt"/></th>
+                 <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.receiver"/></th>
+                 <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.kll"/></th>
+                 <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.weight"/></th>
+                 <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.godsNr"/>
 					<c:choose>
                  	<c:when test="${model.sortCol == 'godsnr'}">
 	                 	<a href="uoppdragSortByColumn.do?uoType=${model.listType}&col=godsnr&sort=${model.imgSortPng}&llim=${model.llim}&ulim=${model.ulim}">
@@ -233,11 +234,12 @@
 	                		</a>
                 		</c:otherwise>
 					</c:choose>                 
-                 </td>
-                 <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.status"/></td>
-                 <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.mark"/></td>
+                 </th>
+                 <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.status"/></th>
+                 <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.main.list.label.mark"/></th>
               </tr>
-              
+              </thead>
+              <tbody>
               <c:forEach items="${model.list}" var="record" varStatus="counter">    
               <c:choose>           
                   <c:when test="${counter.count%2==0}">
@@ -283,8 +285,8 @@
 	               --%>
               </tr>
               <c:set var="numberOfRecords" value="${counter.count}" scope="request" />   
-			            
-           </c:forEach>
+		   </c:forEach>
+           </tbody>
            <tr height="20"><td></td></tr>    
 		</tr>         	
        </table>

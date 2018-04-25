@@ -27,11 +27,11 @@
 	
 	<script type="text/javascript" src="resources/js/systemaWebGlobal.js?ver=${user.versionEspedsg}"></script>
 	
-    <table class="noBg" width="1100" border="0" cellspacing="0" cellpadding="0">
+    <table class="noBg" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<%--Banner --%>
 	 	<tr>
     		<td height="60" class="headerTdsBannerAreaBg" width="100%" align="left" colspan="3"> 
-    			 <table width="1100" border="0" cellspacing="0" cellpadding="0">
+    			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     			 	<tr>
 			        	<td>&nbsp;</td>
 			        	<td>&nbsp;</td>
@@ -42,20 +42,20 @@
 						 		<c:when test="${not empty user.logo}">
 					 				<c:choose>
 						 				<c:when test="${fn:contains(user.logo, '/')}">
-						 					<td class="text12" width="10%" align="center" valign="middle" >
+						 					<td class="text14" width="10%" align="center" valign="middle" >
 												<img src="${user.logo}" border="0" width="30px" height="20px">
 											</td>
 										</c:when>
 										<c:otherwise>
 											<c:choose>
 												<c:when test="${fn:contains(user.logo, 'systema')}">
-												<td class="text12white" width="10%" align=left valign="bottom" >&nbsp;
+												<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;
 													<img src="resources/images/${user.logo}" border="0" width=80px height=50px>
 												</td>
 												</c:when>
 												<c:otherwise>
 													<c:if test="${fn:contains(user.logo, 'logo')}">
-														<td class="text12white" width="10%" align=left valign="bottom" >&nbsp;
+														<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;
 															<img src="resources/images/${user.logo}" border="0" >
 														</td>
 													</c:if>
@@ -65,11 +65,11 @@
 									</c:choose>
 	   			 				</c:when> 
 	   			 				<c:otherwise>
-							 		<td class="text12white" width="10%" align=left valign="bottom" >&nbsp;</td>
+							 		<td class="text14white" width="10%" align=left valign="bottom" >&nbsp;</td>
 							 		<%-- <td class="text12white" width="10%" align=right valign="bottom" >&nbsp;</td>--%>
 						 		</c:otherwise>
 					 		</c:choose>
-				 		<td class="text22Bold" width="40%" align="middle" valign="middle" style="color:#778899;" > 
+				 		<td class="text32Bold" width="100%" align="middle" valign="middle" style="color:#778899;" > 
 				 			eSped<font style="color:#003300;">sg</font> - Ufortollede oppdrag
 			 			</td>
 		    			<td class="text12" width="30%" align="right" valign="middle" >
@@ -87,24 +87,24 @@
 			</td>
 		</tr>
     		<tr>
-			<td height="23" class="tabThinBorderLightSlateGray" width="100%" align="left" colspan="3"> 
-    			 <table width="1100" border="0" cellspacing="1" cellpadding="1">
+			<td height="23" class="tabThinBorderLightGreenLogoutE2" width="100%" align="left" colspan="3"> 
+    			 <table width="100%" border="0" cellspacing="1" cellpadding="1">
 			 	<tr >
-		    		<td class="text11" width="50%" align="left" >&nbsp;&nbsp;</td>
-     				<td class="text11" width="50%" align="right">
+		    		<td class="text14" width="50%" align="left" >&nbsp;&nbsp;</td>
+     				<td class="text14" width="50%" align="right">
      					<font class="headerMenuGreen">
 		    				<img src="resources/images/appUser.gif" border="0" > 
-						<font class="text11User" >${user.user}&nbsp;</font>${user.usrLang}
+						<font class="text14User" >${user.user}&nbsp;</font>${user.usrLang}
 		    			</font>
 		    			<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;|&nbsp;</font>
 		    			<a href="logout.do">
 		    				<font class="headerMenuGreen"><img src="resources/images/home.gif" border="0">&nbsp;
-		    					<font class="text11User" ><spring:message code="dashboard.menu.button"/>&nbsp;</font>
+		    					<font class="text14User" ><spring:message code="dashboard.menu.button"/>&nbsp;</font>
 		    				</font>
 		    			</a>
 		    			<font color="#FFFFFF"; style="font-weight: bold;">&nbsp;&nbsp;|&nbsp;</font>
 		    			<font class="text12LightGreen" style="cursor:pointer;" onClick="showPop('versionInfo');">${user.versionSpring}&nbsp;</font>
-    				    <div class="text11" style="position: relative;" align="left">
+    				    <div class="text11" style="position: relative; display:inline;" align="left">
 							<span style="position:absolute; left:5px; top:30px; width:250px" id="versionInfo" class="popupWithInputText"  >	
 				           		&nbsp;<b>${user.versionEspedsg}</b>
 			           			<br/><br/>

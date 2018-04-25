@@ -10,7 +10,7 @@
 <tr>
 	<td>
 	<%-- tab container component --%>
-	<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+	<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 		<tr height="2"><td></td></tr>
 		<tr height="25"> 
 			<td width="20%" valign="bottom" class="tab" align="center">
@@ -39,7 +39,7 @@
  	        				</tr>
  	        				<tr >
 			 	        		<td colspan="2">
-			 	        			<table style="table-layout: fixed;" width="910px" align="center" border="0" >
+			 	        			<table style="table-layout: fixed;" width="1210px" align="center" border="0" >
 			 	    					<tr>
 				 	    					<td width="40px">&nbsp;</td>
 				 	    					<c:forEach items="${model.chartCategoriesList}" var="record" varStatus="counter">
@@ -67,8 +67,8 @@
 					 	    					 				</c:choose>
 					 	    					 			</c:otherwise>
 				 	    					 			</c:choose>
-								             		<font class="text11Bold">${record.numberOfDager}</font>
-									             	<font class="text11">&nbsp;stk</font>
+								             		<font class="text12Bold">${record.numberOfDager}</font>
+									             	<font class="text14">&nbsp;stk</font>
 				 	    							</a>
 			 	    							</td>
 				 	        				</c:forEach>	
@@ -83,10 +83,10 @@
 							<td>
 			 	        			<table class="tableBorder" align="center" border="0" >
 				 	        			<tr>
-			 	        					<td class="text12">
+			 	        					<td class="text14">
 			 	        					<table cellspacing="1" border="0">
 			 	        						<tr>
-			 	        						<td class="text12">
+			 	        						<td class="text14">
 			 	        							<a href="uoppdrag.do?">
 			 	        								&nbsp;
 					 	        						<font class="text14Bold" style="font-style:italic;text-decoration:underline;"><b>${model.ufortListSize}</b></font>
@@ -94,12 +94,12 @@
 					 	        						
 						 	        				</a>
 					 	        				</td>
-					 	        				<td class="text12">
+					 	        				<td class="text14">
 					 	        					<input style="visibility:hidden;" class="inputFormSubmitGrayOnGraph" type="submit" name="submit" id="submit" onclick="javascript: form.action='uoppdraggate.do';" value='Oppdater diagram'>
 					 	        					<%--
 					 	        					<img onMouseOver="showPop('clientChart_info');" onMouseOut="hidePop('clientChart_info');"style="vertical-align:top;" width="14px" height="14px" src="resources/images/info3.png" border="0" alt="info">
 												<span id="clientChart_info" style="position:absolute; left:680px; top:640px; width:250px; height:100px;" class="popupWithInputText"  >
-									           		<div class="text11" align="left">
+									           		<div class="text14" align="left">
 									           		<b>Oppdater diagram</b>
 									           		<br/><br/>
 									           		Diagrammet er oppdatert på <b>klientsidan</b>.<br/>
@@ -115,11 +115,11 @@
 			 	        				</tr>
 			 	        				<tr height="3"><td></td></tr>
 			 	        				<tr>
-			 	        					<td class="text12">
+			 	        					<td class="text14">
 			 	        					<table cellspacing="1" border="0">
 			 	        						<tr>
-			 	        						<td class="text12">
-					 	        					<select class="text11" id="tariffor" name="tariffor">
+			 	        						<td class="text14">
+					 	        					<select class="text14" id="tariffor" name="tariffor">
 						 	        					<option style="font-style:italic;" value="">Tariffør - Alle</option>
 													<c:forEach items="${model.hsTariffor}" var="record" varStatus="counter">
 														<c:if test="${not empty record}">
@@ -128,8 +128,8 @@
 													</c:forEach>
 												</select>
 					 	        				</td>
-					 	        				<td class="text12">
-					 	        					<select class="text11" id="sign" name="sign">
+					 	        				<td class="text14">
+					 	        					<select class="text14" id="sign" name="sign">
 						 	        					<option style="font-style:italic;" value="">Sign - Alle</option>
 													<c:forEach items="${model.hsSign}" var="record" varStatus="counter">
 														<c:if test="${not empty record}">
@@ -138,14 +138,14 @@
 													</c:forEach>
 												</select>
 					 	        				</td>
-			 	        						<td class="text12">&nbsp;&nbsp;&nbsp;
+			 	        						<td class="text14">&nbsp;&nbsp;&nbsp;
 			 	        							<img onClick="showPop('avd_info');"style="vertical-align:top;cursor:pointer;" width="14px" height="14px" src="resources/images/info3.png" border="0" alt="info">
 												<span style="position:absolute; left:550px; top:600px; width:350px; height:200px;" id="avd_info" class="popupWithInputText"  >
 									           		<div class="ownScrollableSubWindow" style="width:345px; height:150px;">
 									           			<nav>
-									           			<font class="text12"><b>Ytterligere informasjon</b> om avdelinger (<b>navn</b>)</font>
+									           			<font class="text14"><b>Ytterligere informasjon</b> om avdelinger (<b>navn</b>)</font>
 									           			<br/><br/>
-									           			<select size="5" class="text11" id="avdExtraInfo" name="avdExtraInfo">
+									           			<select size="5" class="text14" id="avdExtraInfo" name="avdExtraInfo">
 								 	        					<c:forEach items="${model.hsAvdAvdNavn}" var="record" varStatus="counter">
 																<c:if test="${not empty record}">
 							 	        								<option value="${record}">${record}</option>
@@ -158,7 +158,7 @@
 									           		<button name="avdInformationButtonClose" id="avdInformationButtonClose" class="buttonGrayInsideDivPopup" type="button" onClick="hidePop('avd_info');">Ok</button> 
 								           			<br/>	
 										        </span>
-										        <select class="text11" id="avd" name="avd">
+										        <select class="text14" id="avd" name="avd">
 						 	        					<option style="font-style:italic;" value="">Avd - Alle</option>
 													<c:forEach items="${model.hsAvd}" var="record" varStatus="counter">
 														<c:if test="${not empty record}">
@@ -168,8 +168,8 @@
 												</select>
 												 
 					 	        				</td>
-											<td class="text12" >
-												<select class="text11" name="avdList" id="avdList">
+											<td class="text14" >
+												<select class="text14" name="avdList" id="avdList">
 									            		<option style="font-style:italic;" value="">Avd.gruppe - Alle</option>
 								 				  	<c:forEach var="record" items="${model.avdGroupsList}" >
 								 				  		<c:if test="${not empty record}">
@@ -182,8 +182,8 @@
 											
 											<c:choose>
 												<c:when test="${model.hsTollagerkodSize>1}">
-													<td class="text12" >
-														<select class="text11" name="tollagerkod" id="tollagerkod">
+													<td class="text14" >
+														<select class="text14" name="tollagerkod" id="tollagerkod">
 											            		<option style="font-style:italic;" value="">Lagerkode - Alle</option>
 										 				  	<c:forEach items="${model.hsTollagerkod}" var="record" varStatus="counter">
 										 				  		<c:if test="${not empty record}">
@@ -193,8 +193,8 @@
 														</select>
 													</td>
 													<c:if test="${model.hsTollagerdelkodSize>1}">
-														<td class="text12" >
-															<select class="text11" name="tollagerdelkod" id="tollagerdelkod">
+														<td class="text14" >
+															<select class="text14" name="tollagerdelkod" id="tollagerdelkod">
 												            		<option style="font-style:italic;" value="">Enh.kode - Alle</option>
 											 				  	<c:forEach items="${model.hsTollagerdelkod}" var="record" varStatus="counter">
 											 				  		<c:if test="${not empty record}">
@@ -208,8 +208,8 @@
 												<c:otherwise>
 													<%-- IF and ONLY IF delkod > 1 then show parent-child --%>
 													<c:if test="${model.hsTollagerdelkodSize>1}"> 
-														<td class="text12" >
-															<select class="text11" name="tollagerkod" id="tollagerkod">
+														<td class="text14" >
+															<select class="text14" name="tollagerkod" id="tollagerkod">
 												            		<option style="font-style:italic;" value="">Lagerkode - Alle</option>
 											 				  	<c:forEach items="${model.hsTollagerkod}" var="record" varStatus="counter">
 											 				  		<c:if test="${not empty record}">
@@ -218,8 +218,8 @@
 																</c:forEach> 
 															</select>
 														</td>
-														<td class="text12" >
-															<select class="text11" name="tollagerdelkod" id="tollagerdelkod">
+														<td class="text14" >
+															<select class="text14" name="tollagerdelkod" id="tollagerdelkod">
 												            		<option style="font-style:italic;" value="">Enh.kode - Alle</option>
 											 				  	<c:forEach items="${model.hsTollagerdelkod}" var="record" varStatus="counter">
 											 				  		<c:if test="${not empty record}">
@@ -233,13 +233,13 @@
 											</c:choose>
 
 											
-											<td class="text12" >&nbsp;&nbsp;
-												<select class="text11" id="antHfaktFlag" name="antHfaktFlag">
+											<td class="text14" >&nbsp;&nbsp;
+												<select class="text14" id="antHfaktFlag" name="antHfaktFlag">
 							        					<option style="font-style:italic;" value="">HandelsFakt - Alle</option>
 						        						<option value="Y" <c:if test="${model.searchFilterGateChar.antHfaktFlag == 'Y'}"> selected </c:if>  >Med skannet HF</option>
 						        						<option value="N" <c:if test="${model.searchFilterGateChar.antHfaktFlag == 'N'}"> selected </c:if>  >Uten skannet HF</option>
 												</select>
-												<select class="text11" id="statusFlag" name="statusFlag">
+												<select class="text14" id="statusFlag" name="statusFlag">
 							        					<option style="font-style:italic;" value="">Status - Alle</option>
 						        						<option value="N" <c:if test="${model.searchFilterGateChar.statusFlag == 'N'}"> selected </c:if>  > Ikke påbegynt</option>
 						        						<option value="Y" <c:if test="${model.searchFilterGateChar.statusFlag == 'Y'}"> selected </c:if>  > Påbegynt</option>
@@ -257,11 +257,11 @@
 							<td>
 			 	        			<table align="center" border="0" >
 				 	        			<tr>
-				 	        				<td class="text12" >
+				 	        				<td class="text14" >
 											<img onMouseOver="showPop('serverChart_info');" onMouseOut="hidePop('serverChart_info');"style="vertical-align:top;" width="14px" height="14px" src="resources/images/info3.png" border="0" alt="info">
 											<input class="inputFormSubmitGrayOnGraph" style="cursor:pointer;" type="submit" name="deepSubmit" id="deepSubmit" onclick="javascript: form.action='uoppdraggate.do';" value='Oppdater datagrunnlaget'>	
 											<span id="serverChart_info" style="position:absolute; left:700px; top:600px; width:300px; height:100px;" class="popupWithInputText"  >
-								           		<div class="text11" align="left">
+								           		<div class="text14" align="left">
 								           		<b>Oppdater datagrunnlaget</b>
 								           		<br/><br/>
 								           		Trykk her når du ønsker å hente ferske data fra 
@@ -271,10 +271,10 @@
 								           		</div>
 											</span>		
 				    						</td>
-				 	        				<td class="text12" style="min-width:10px" >&nbsp;</td>
-					 	        			<td class="text12" style="vertical-align:bottom;" >
+				 	        				<td class="text14" style="min-width:10px" >&nbsp;</td>
+					 	        			<td class="text14" style="vertical-align:bottom;" >
 											<img style="vertical-align:middle;" width="18px" height="18px" src="resources/images/clock.png" border="0" alt="info">
-											<select class="text11" id="chartTickerInterval" name="chartTickerInterval">
+											<select class="text14" id="chartTickerInterval" name="chartTickerInterval">
 						        					<option style="font-style:italic;" value='-99'>Auto oppdater - Stoppet</option>
 					        						<option value='60000' <c:if test="${model.searchFilterGateChar.autoRefresh == '60000' || chartTickerInterval_SESSION == '60000'}"> selected </c:if>  >Hvert minutt</option>
 					        						<option value='120000' <c:if test="${model.searchFilterGateChar.autoRefresh == '120000' || chartTickerInterval_SESSION == '120000'}"> selected </c:if>  >Hvert 2. minutt</option>

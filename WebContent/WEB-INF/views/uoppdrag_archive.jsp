@@ -5,11 +5,11 @@
 <jsp:include page="/WEB-INF/views/headerUoppdrag.jsp" />
 <!-- =====================end header ==========================-->
 
-<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 	<tr>
 		<td>
 		<%-- tab container component --%>
-		<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+		<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 			<tr height="2"><td></td></tr>
 			<tr height="25"> 
 				<td width="20%" valign="bottom" class="tabDisabled" align="center">
@@ -67,15 +67,18 @@
 			<tr>
 				<td>
 				<table width="100%" cellspacing="0" border="0" cellpadding="0">
+					<thead>
 					<tr class="tableHeaderField" height="20" valign="left">
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.docType"/>&nbsp;</td> 
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.subject"/>&nbsp;</td> 
-	                    <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.date"/>&nbsp;</td>
-	                    <td class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.time"/>&nbsp;</td>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.additionalInfo"/>&nbsp;</td>
-	                    <%-- <td class="tableHeaderField">&nbsp;<spring:message code="systema.tds.export.archive.list.label.url"/>&nbsp;</td>  --%>
-	                    <td class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.dokumentName"/></td> 
-	               </tr>     
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.docType"/>&nbsp;</th> 
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.subject"/>&nbsp;</th> 
+	                    <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.date"/>&nbsp;</th>
+	                    <th class="tableHeaderField" align="right">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.time"/>&nbsp;</th>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.additionalInfo"/>&nbsp;</th>
+	                    <%-- <th class="tableHeaderField">&nbsp;<spring:message code="systema.tds.export.archive.list.label.url"/>&nbsp;</th>  --%>
+	                    <th class="tableHeaderField">&nbsp;<spring:message code="systema.overview.uoppdrag.archive.list.label.dokumentName"/></th> 
+	               </tr>  
+	               </thead>
+	               <tbody>   
 		           	<c:forEach items="${list}" var="record" varStatus="counter">    
 		               <c:choose>           
 		                   <c:when test="${counter.count%2==0}">
@@ -99,7 +102,7 @@
 		               </td>
 		            </tr> 
 		            </c:forEach>
-		            
+		            </tbody>
 	            </table>
 			</td>	
 			</tr>
