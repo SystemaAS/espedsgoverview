@@ -9,11 +9,11 @@
 		specified in servlet.xml as static <mvc:resources mapping="/resources/**" location="WEB-INF/resources/" order="1"/> --%>
 	<SCRIPT type="text/javascript" src="resources/js/sendingerlevtid.js?ver=${user.versionEspedsg}"></SCRIPT>
 	
-<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 <tr>
 	<td>
 	<%-- tab container component --%>
-	<table width="100%"  class="text11" cellspacing="0" border="0" cellpadding="0">
+	<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 		<tr height="2"><td></td></tr>
 		<tr height="25">
 			<td width="20%" valign="bottom" class="tabDisabled" align="center">
@@ -35,7 +35,7 @@
 			<td width="25%" valign="bottom" class="tab" align="center">
 				<c:choose>
 				<c:when test="${not empty model.listType}">
-					<font class="text12">${model.listType}</font></font>&nbsp;&nbsp;<font class="text12Bold">[${model.offset}]</font>
+					<font class="text14">${model.listType}</font></font>&nbsp;&nbsp;<font class="text14Bold">[${model.offset}]</font>
 					&nbsp;&nbsp;&nbsp;				
 					<input class="inputFormSubmitUoppNeutralR" type="submit" name="totalButton" value='${model.listSize}'/>
 				</c:when>
@@ -66,16 +66,16 @@
 		 	        	<input type="hidden" name="ulim" id="ulim" value='${model.ulim}'>
 		 	        
 		 	        	<tr>	
-			 	        <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;Dato</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;Dager</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;Tar</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Oppdrag</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Sign</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Avd</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Ext.Ref</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Handl.faktura</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Mottaker</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Kll</td>
+			 	        <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;Dato</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;Dager</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;Tar</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Oppdrag</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Sign</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Avd</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Ext.Ref</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Handl.faktura</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Mottaker</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Kll</td>
 		            </tr>
 		            <tr>
 			            <td align="left" >&nbsp;&nbsp;<input onKeyPress="return dateKey(event)" type="text" class="inputText" name="dato" id="dato" size="10" maxlength="8" value='${model.searchFilter.dato}'>&nbsp;</td>
@@ -113,10 +113,10 @@
 		                
 					</tr>
 	            	    <tr>
-		                <td class="text12" align="left" >&nbsp;&nbsp;&nbsp;Vekt</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Godsnr</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Status</td>
-		                <td class="text12" align="left" >&nbsp;&nbsp;Merknad</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;&nbsp;Vekt</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Godsnr</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Status</td>
+		                <td class="text14" align="left" >&nbsp;&nbsp;Merknad</td>
 		            </tr>
 					<tr>	
 						<td align="left" >&nbsp;<input type="text" class="inputText" name="vekt" id="vekt" size="5" maxlength="20" value='${model.searchFilter.vekt}'>&nbsp;</td>

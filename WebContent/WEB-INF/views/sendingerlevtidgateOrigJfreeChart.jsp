@@ -111,9 +111,9 @@
 			 	        					<td class="text12">
 			 	        					<table cellspacing="2">
 			 	        					<form name="formRefresh" id="formRefresh" action="sendingerlevtidgate.do" method="POST" >
-					 	        				<td class="text12">
+					 	        				<td class="text14">
 					 	        					Avd
-					 	        					<select class="text11" id="searchFilterGateCharAvd" name="searchFilterGateCharAvd">
+					 	        					<select class="text14" id="searchFilterGateCharAvd" name="searchFilterGateCharAvd">
 					 	        					<option value="">-Alle-</option>
 												<c:forEach items="${model.hsAvd}" var="record" varStatus="counter">
 				 	        							<option value='${record}'<c:if test="${model.searchFilterGateChar.avd == record}"> selected </c:if>>${record}</option>
@@ -133,7 +133,7 @@
 												
 					 	        				</td>
 					 	        				 --%>
-					 	        				<td class="text12">
+					 	        				<td class="text14">
 					 	        					&nbsp;&nbsp;&nbsp;
 					 	        					<input class="inputFormSubmitGrayOnGraph" type="submit" name="submit" value='Oppdater diagram'>
 					 	        				</td>

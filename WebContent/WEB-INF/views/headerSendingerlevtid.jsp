@@ -26,12 +26,12 @@
 	
 	<script type="text/javascript" src="resources/js/systemaWebGlobal.js?ver=${user.versionEspedsg}"></script>
 	
-    <table class="noBg" width="1100" border="0" cellspacing="0" cellpadding="0">
+    <table class="noBg" width="100%" border="0" cellspacing="0" cellpadding="0">
 		<%--Banner --%>
 	 	<tr>
 	 		 <%-- class="grayTitanBg" --%>
     		<td height="60" class="headerTdsBannerAreaBg" width="100%" align="left" colspan="3"> 
-    			 <table width="1100" border="0" cellspacing="0" cellpadding="0">
+    			 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     			 	<tr>
 			        	<td>&nbsp;</td>
 			        	<td>&nbsp;</td>
@@ -41,7 +41,7 @@
 				 		<td style="min-width: 300px; max-width: 300px;" class="text12white" align=left valign="middle" >
 				 			<img align="middle" src="${user.logo}" >
 				 		</td>
-				 		<td class="text22Bold" width="40%" align="middle" valign="middle" > 
+				 		<td class="text32Bold" width="40%" align="middle" valign="middle" > 
 				 			Sendinger / Leveringstid
 			 			</td>
 			    			<td class="text12" width="30%" align="right" valign="middle" >
@@ -59,11 +59,11 @@
 			</td>
 		</tr>
     		<tr>
-			<td height="23" class="tabThinBorderLightSlateGray" width="100%" align="left" colspan="3"> 
-    			 <table width="1100" border="0" cellspacing="1" cellpadding="1">
+			<td height="23" class="tabThinBorderLightGreenLogoutE2" width="100%" align="left" colspan="3"> 
+    			 <table width="100%" border="0" cellspacing="1" cellpadding="1">
 			 	<tr >
-		    		<td class="text11" width="50%" align="left" >&nbsp;&nbsp;</td>
-     				<td class="text11" width="50%" align="right">
+		    		<td class="text14" width="50%" align="left" >&nbsp;&nbsp;</td>
+     				<td class="text14" width="50%" align="right">
      					<font class="headerMenuGreen">
 		    				<img src="resources/images/appUser.gif" border="0" > 
 						<font style="color:#000000" >${user.user}&nbsp;</font>${user.usrLang}
