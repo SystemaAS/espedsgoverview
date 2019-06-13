@@ -17,7 +17,7 @@
           //--------------------------
           var data = new google.visualization.DataTable();
           var leveringsKvalDbl = Number('${model.container.leveringsKvalDbl}');
-          //alert(leveringsKvalDbl);
+          console.log("leveringsKvalDbl" + leveringsKvalDbl);
           data.addColumn('string', 'Leveringskvalitet');
           data.addColumn('number', 'Prosent');
           data.addRows([
@@ -49,7 +49,7 @@
           //----------------------------
           var dataArk = new google.visualization.DataTable();
           var archievedKvalDbl = Number('${model.container.archievedKvalDbl}');
-        	  //alert(archievedKvalDbl);
+        	  console.log("archievedKvalDbl:" + archievedKvalDbl);
           dataArk.addColumn('string', 'POD Archived-kvalitet');
           dataArk.addColumn('number', 'Prosent');
           dataArk.addRows([

@@ -129,7 +129,7 @@ public class SendingerlevtidGateController {
 	        binder.bind(request);
 	        //store the filter in session. From this point on all coming tabs must fetch the filter from session in order to
 	        //navigate back and forward in the differente tabs (charts, list) based on the filter selection 
-	        	session.setAttribute(sessionId + SendingerlevtidConstants.DOMAIN_SEARCH_FILTER_GATE_CHAR,searchFilterGateChart );
+	        session.setAttribute(sessionId + SendingerlevtidConstants.DOMAIN_SEARCH_FILTER_GATE_CHAR,searchFilterGateChart );
 
 		}
 		
@@ -148,60 +148,60 @@ public class SendingerlevtidGateController {
 			session.setAttribute(SendingerlevtidConstants.ACTIVE_URL_RPG, BASE_URL  + "==>params: " + urlRequestParamsKeys.toString()); 
 			
 			logger.info(Calendar.getInstance().getTime() + " CGI-start timestamp");
-		    	logger.info("URL: " + BASE_URL);
-		    	logger.info("URL PARAMS: " + urlRequestParamsKeys);
-		    	//--------------------------------------
-		    	//EXECUTE the FETCH (RPG program) here
-		    	//--------------------------------------
-		    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParamsKeys);
-    			
-		    	JsonTopicContainer jsonTopicContainer = null;
-		    	if(jsonPayload!=null){
-		    		try{
-		    			//Debug --> 
-		    			this.jsonDebugger.debugJsonPayload(jsonPayload);
-				    	
-		    			jsonTopicContainer = this.sendingerlevtidService.getContainer(jsonPayload);
-		    			logger.info(Calendar.getInstance().getTime() +  " CGI-end timestamp");
-				    	
-		    			if(jsonTopicContainer!=null){
-		    				Collection<JsonTopicRecord> kvalList = jsonTopicContainer.getKvalList();
-		    				
-		    				this.populateSearchFilterDropDowns(kvalList, model);
-		    				//------------------------------
-			    			//START search filter conditions
-			    			//------------------------------
-			    			//if the user chose a filter condition we must then filter the complete list in order to have the main set based on the filter conditions
-			    			/*if(searchFilterGateChart.getSign()!=null || searchFilterGateChart.getAvd()!=null){
-			    				logger.info("################################ Inside WASH list");
-			    				kvalList = this.buildNewListWithSearchFilter(kvalList, searchFilterGateChart);
-			    				model.put(SendingerlevtidConstants.DOMAIN_SEARCH_FILTER_GATE_CHAR, searchFilterGateChart);
-			    			}*/
-			    			//------------------------------
-			    			//END search filter conditions
-			    			//------------------------------
-			    			//put the graph and the JSON container in session since we will use the info until a refresh (in another user activity)
-			    			//from this point forward we will be getting the dataset from the session until we return to this method (refresh)
-			    			jsonTopicContainer.setKvalList(kvalList); //refresh the list in case some filter values were applicable
-		    				session.setAttribute(sessionId + SendingerlevtidConstants.SESSION_SENDLEV_JSON_CONTAINER_GRAPH, jsonTopicContainer );
-		    				//save the searchFilter object as well for use until next refresh
-		    				//session.setAttribute(sessionId + SendingerlevtidConstants.DOMAIN_SEARCH_FILTER_GATE_CHAR, searchFilterGateChart);
-			    			
-		    				model.put(SendingerlevtidConstants.DOMAIN_LIST, jsonTopicContainer.getKvalList());
-			    			model.put(SendingerlevtidConstants.DOMAIN_SENDINGER_LIST_SIZE, jsonTopicContainer.getKvalList().size());
-			    			model.put(SendingerlevtidConstants.DOMAIN_CONTAINER, jsonTopicContainer);
-			    			
-		    				//put the final model (other than the chart) available for view
-			            successView.addObject(SendingerlevtidConstants.DOMAIN_MODEL, model);
-		    			}else{
-		    				session.setAttribute(AppConstants.ASPECT_ERROR_MESSAGE, "[ERROR fatal] jsonContainer is NULL. Check logs...");
-		    			}
+	    	logger.info("URL: " + BASE_URL);
+	    	logger.info("URL PARAMS: " + urlRequestParamsKeys);
+	    	//--------------------------------------
+	    	//EXECUTE the FETCH (RPG program) here
+	    	//--------------------------------------
+	    	String jsonPayload = this.urlCgiProxyService.getJsonContent(BASE_URL, urlRequestParamsKeys);
+			
+	    	JsonTopicContainer jsonTopicContainer = null;
+	    	if(jsonPayload!=null){
+	    		try{
+	    			//Debug --> 
+	    			this.jsonDebugger.debugJsonPayload(jsonPayload);
+			    	
+	    			jsonTopicContainer = this.sendingerlevtidService.getContainer(jsonPayload);
+	    			logger.info(Calendar.getInstance().getTime() +  " CGI-end timestamp");
+			    	
+	    			if(jsonTopicContainer!=null){
+	    				Collection<JsonTopicRecord> kvalList = jsonTopicContainer.getKvalList();
+	    				
+	    				this.populateSearchFilterDropDowns(kvalList, model);
+	    				//------------------------------
+		    			//START search filter conditions
+		    			//------------------------------
+		    			//if the user chose a filter condition we must then filter the complete list in order to have the main set based on the filter conditions
+		    			/*if(searchFilterGateChart.getSign()!=null || searchFilterGateChart.getAvd()!=null){
+		    				logger.info("################################ Inside WASH list");
+		    				kvalList = this.buildNewListWithSearchFilter(kvalList, searchFilterGateChart);
+		    				model.put(SendingerlevtidConstants.DOMAIN_SEARCH_FILTER_GATE_CHAR, searchFilterGateChart);
+		    			}*/
+		    			//------------------------------
+		    			//END search filter conditions
+		    			//------------------------------
+		    			//put the graph and the JSON container in session since we will use the info until a refresh (in another user activity)
+		    			//from this point forward we will be getting the dataset from the session until we return to this method (refresh)
+		    			jsonTopicContainer.setKvalList(kvalList); //refresh the list in case some filter values were applicable
+	    				session.setAttribute(sessionId + SendingerlevtidConstants.SESSION_SENDLEV_JSON_CONTAINER_GRAPH, jsonTopicContainer );
+	    				//save the searchFilter object as well for use until next refresh
+	    				//session.setAttribute(sessionId + SendingerlevtidConstants.DOMAIN_SEARCH_FILTER_GATE_CHAR, searchFilterGateChart);
 		    			
-		    		}catch(Exception e){
-		    			e.printStackTrace();
-		    			session.setAttribute(AppConstants.ASPECT_ERROR_MESSAGE, "[ERROR fatal] jsonPayload is NULL. Check logs...");
-		    		}
-		    	}
+	    				model.put(SendingerlevtidConstants.DOMAIN_LIST, jsonTopicContainer.getKvalList());
+		    			model.put(SendingerlevtidConstants.DOMAIN_SENDINGER_LIST_SIZE, jsonTopicContainer.getKvalList().size());
+		    			model.put(SendingerlevtidConstants.DOMAIN_CONTAINER, jsonTopicContainer);
+		    			
+	    				//put the final model (other than the chart) available for view
+		    			successView.addObject(SendingerlevtidConstants.DOMAIN_MODEL, model);
+	    			}else{
+	    				session.setAttribute(AppConstants.ASPECT_ERROR_MESSAGE, "[ERROR fatal] jsonContainer is NULL. Check logs...");
+	    			}
+	    			
+	    		}catch(Exception e){
+	    			e.printStackTrace();
+	    			session.setAttribute(AppConstants.ASPECT_ERROR_MESSAGE, "[ERROR fatal] jsonPayload is NULL. Check logs...");
+	    		}
+	    	}
 			
 		}
 		
