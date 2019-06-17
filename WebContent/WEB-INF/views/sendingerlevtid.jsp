@@ -5,9 +5,6 @@
 <jsp:include page="/WEB-INF/views/headerSendingerlevtid.jsp" />
 <!-- =====================end header ==========================-->
 
-	<%-- specific jQuery functions for this JSP (must reside under the resource map since this has been
-		specified in servlet.xml as static <mvc:resources mapping="/resources/**" location="WEB-INF/resources/" order="1"/> --%>
-	<SCRIPT type="text/javascript" src="resources/js/sendingerlevtid.js?ver=${user.versionEspedsg}"></SCRIPT>
 	
 <table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 <tr>

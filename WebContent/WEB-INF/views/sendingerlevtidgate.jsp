@@ -4,6 +4,9 @@
 <!-- ======================= header ===========================-->
 <jsp:include page="/WEB-INF/views/headerSendingerlevtid.jsp" />
 <!-- =====================end header ==========================-->
+	
+	
+
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -17,6 +20,7 @@
           //--------------------------
           var data = new google.visualization.DataTable();
           var leveringsKvalDbl = Number('${model.container.leveringsKvalDbl}');
+          //TEST var leveringsKvalDbl = Number('60');
           console.log("leveringsKvalDbl" + leveringsKvalDbl);
           data.addColumn('string', 'Leveringskvalitet');
           data.addColumn('number', 'Prosent');

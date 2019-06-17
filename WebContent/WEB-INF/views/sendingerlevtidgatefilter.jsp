@@ -6,29 +6,31 @@
 <!-- =====================end header ==========================-->
 <SCRIPT type="text/javascript" src="resources/js/sendingerlevtidgatefilter.js?ver=${user.versionEspedsg}"></SCRIPT>	
 
-<script type="text/javascript">
-//<![CDATA[
-//Send form if they hit enter.
-/*
-document.onkeypress = enter;
-function enter(e){
-if (e.which == 13){sendform()}
-}
 
-//Form to send 
-function sendform(){
-document.forms[0].submit();
-}
-*/
-//]]>
-</script>
+<style type = "text/css">
+	.ui-dialog{font-size:11pt;}
+	.ui-datepicker { font-size:9pt;}
+	.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+	.ui-timepicker-div dl { text-align: left; }
+	.ui-timepicker-div dl dt { float: left; clear:left; padding: 0 0 0 5px; }
+	.ui-timepicker-div dl dd { margin: 0 10px 10px 40%; }
+	.ui-timepicker-div td { font-size: 90%; }
+	.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+	
+	.ui-timepicker-rtl{ direction: rtl; }
+	.ui-timepicker-rtl dl { text-align: right; padding: 0 5px 0 0; }
+	.ui-timepicker-rtl dl dt{ float: right; clear: right; }
+	.ui-timepicker-rtl dl dd { margin: 0 40% 10px 10px; }
+	
+</style>
+
 
 <table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 <table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 <tr>
 	<td>
 	<%-- tab container component --%>
-	<table tabindex='-1' width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
+	<table width="100%"  class="text14" cellspacing="0" border="0" cellpadding="0">
 		<tr height="2"><td></td></tr>
 		<tr height="25"> 
 			<td width="20%" valign="bottom" class="tab" align="center" >
@@ -45,7 +47,7 @@ document.forms[0].submit();
 <tr>
 	<td>
 	<%-- tab component --%>
- 		<table  tabindex='-1' height="750px" width="100%" class="tabThinBorderWhite" border="0" cellspacing="0" cellpadding="0">
+ 		<table  width="100%" class="tabThinBorderWhite" border="0" cellspacing="0" cellpadding="0">
  	        <tr height="60"><td>&nbsp;</td></tr>
  	        <tr style="height:15px;">
 	 			<td valign="bottom" >		

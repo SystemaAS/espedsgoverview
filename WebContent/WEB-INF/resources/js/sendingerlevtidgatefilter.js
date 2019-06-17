@@ -1,11 +1,25 @@
 	//this variable is a global jQuery var instead of using "$" all the time. Very handy
   	var jq = jQuery.noConflict();
- 	var map = {};
- 	  
+  	var counterIndex = 0;
+  	var BLOCKUI_OVERLAY_MESSAGE_DEFAULT = "Please wait...";
+  
   	//focus 
   	jq(function() {
-  		jq("#dato").focus();
-  	});
+  	  jq("#dato").datepicker({ 
+  		  dateFormat: 'yymmdd',
+  			  onSelect: function () {
+  		        this.focus();
+  		      }
+  	  });
+  	  jq("#datot").datepicker({ 
+  		  dateFormat: 'yymmdd',
+  			  onSelect: function () {
+  		        this.focus();
+  		      }
+  	  });
+  	  
+  	  jq("#dato").focus();
+    });
   
   	
   	//--------------------------------------
