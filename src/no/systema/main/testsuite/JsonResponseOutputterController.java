@@ -82,6 +82,8 @@ public class JsonResponseOutputterController {
 				sb.append(JSON_FIELD_SEPARATOR );
 				sb.append(JSON_QUOTES + "serviceName" + JSON_QUOTES + ":" + JSON_QUOTES + jsonFixMgr.cleanRecord(record.getServiceName()) + JSON_QUOTES);
 				sb.append(JSON_FIELD_SEPARATOR );
+				sb.append(JSON_QUOTES + "description" + JSON_QUOTES + ":" + JSON_QUOTES + jsonFixMgr.cleanRecord(record.getDescription()) + JSON_QUOTES);
+				sb.append(JSON_FIELD_SEPARATOR );
 				sb.append(JSON_QUOTES + "errMsg" + JSON_QUOTES + ":" + JSON_QUOTES + jsonFixMgr.cleanRecord(record.getErrMsg()) + JSON_QUOTES);
 				sb.append(JSON_CLOSE_LIST_RECORD);
 				counter++;
@@ -109,19 +111,14 @@ public class JsonResponseOutputterController {
 		List<Object> listObj= new ArrayList<Object>();
 		Object urlStoreObj = null;
 		
-		//import no.systema.overview.sendingerlevtid.url.store.UrlDataStore;
-		//import no.systema.overview.ufortolledeoppdrag.url.store.UrlDataStore;
-
-		urlStoreObj = new no.systema.overview.sendingerlevtid.url.store.UrlDataStore();
-		listObj.add(urlStoreObj);
+		//urlStoreObj = new no.systema.overview.sendingerlevtid.url.store.UrlDataStore();
+		//listObj.add(urlStoreObj);
 		urlStoreObj = new no.systema.overview.ufortolledeoppdrag.url.store.UrlDataStore();
 		listObj.add(urlStoreObj);
 		urlStoreObj = new MainUrlDataStore();
 		listObj.add(urlStoreObj);
 		
 		
-		
-			
 		return listObj;
 	}
 	
