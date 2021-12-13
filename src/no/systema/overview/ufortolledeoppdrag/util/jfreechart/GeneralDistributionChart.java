@@ -11,7 +11,7 @@ import java.util.*;
 import java.text.NumberFormat;
 import java.awt.Font;
 import java.awt.Color;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
@@ -38,7 +38,7 @@ import no.systema.overview.ufortolledeoppdrag.util.jfreechart.manager.IJFreeChar
  * 
  */
 public class GeneralDistributionChart {
-	private static final Logger logger = Logger.getLogger(GeneralDistributionChart.class.getName());
+	private static final Logger logger = LogManager.getLogger(GeneralDistributionChart.class.getName());
 	
 	private static final String FILE_TYPE_PNG = ".png";
 	private static final String FILE_TYPE_JPEG = ".jpg";

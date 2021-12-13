@@ -5,7 +5,7 @@ package no.systema.overview.sendingerlevtid.controller.ajax;
 
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
@@ -42,7 +42,7 @@ import no.systema.overview.service.CustomerService;
 
 @Controller
 public class SendingerLevtidAjaxHandlerController {
-	private static final Logger logger = Logger.getLogger(SendingerLevtidAjaxHandlerController.class.getName());
+	private static final Logger logger = LogManager.getLogger(SendingerLevtidAjaxHandlerController.class.getName());
 	 
 	  /**
 	   * Populates the GUI element with a list of carriers fulfilling the search condition

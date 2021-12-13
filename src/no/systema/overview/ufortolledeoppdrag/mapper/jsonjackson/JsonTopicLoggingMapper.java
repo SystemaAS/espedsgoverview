@@ -4,7 +4,7 @@
 package no.systema.overview.ufortolledeoppdrag.mapper.jsonjackson;
 
 //jackson library
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import no.systema.main.mapper.jsonjackson.general.ObjectMapperAbstractGrandFather;
 //application library
@@ -19,7 +19,7 @@ import java.util.*;
  * 
  */
 public class JsonTopicLoggingMapper extends ObjectMapperAbstractGrandFather {
-	private static final Logger logger = Logger.getLogger(JsonTopicLoggingMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(JsonTopicLoggingMapper.class.getName());
 	
 	public JsonTopicLoggingContainer getContainer(String utfPayload) throws Exception{
 		

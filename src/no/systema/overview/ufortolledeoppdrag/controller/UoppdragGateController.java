@@ -3,7 +3,7 @@ package no.systema.overview.ufortolledeoppdrag.controller;
 import java.io.File;
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
@@ -72,7 +72,7 @@ public class UoppdragGateController {
 	
 	
 	
-	private static final Logger logger = Logger.getLogger(UoppdragGateController.class.getName());
+	private static final Logger logger = LogManager.getLogger(UoppdragGateController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private StandardFallbackChartListFor3DBarService standardFallbackChartListFor3DBarService = new StandardFallbackChartListFor3DBarService();
 	private JsonDebugger jsonDebugger = new JsonDebugger();

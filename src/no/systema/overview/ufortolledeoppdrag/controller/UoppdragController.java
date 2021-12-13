@@ -2,7 +2,7 @@ package no.systema.overview.ufortolledeoppdrag.controller;
 
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.ServletRequestDataBinder;
@@ -46,7 +46,7 @@ import no.systema.main.util.AppConstants;
 
 @Controller
 public class UoppdragController {
-	private static final Logger logger = Logger.getLogger(UoppdragController.class.getName());
+	private static final Logger logger = LogManager.getLogger(UoppdragController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	//add here more columns and do not forget to add the new column in the method:getSortedListByColumn in this same class
 	private final String[] sortableColumns = {"dager", "tariffor", "avd", "sign", "godsnr", "extRef"};

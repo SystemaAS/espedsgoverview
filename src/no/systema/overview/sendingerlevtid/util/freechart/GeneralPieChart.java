@@ -5,7 +5,7 @@
 package no.systema.overview.sendingerlevtid.util.freechart;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.jfree.*;
 
 import java.io.*;
@@ -34,7 +34,7 @@ import no.systema.main.util.NumberFormatterLocaleAware;
  * 
  */
 public class GeneralPieChart {
-	private static final Logger logger = Logger.getLogger(GeneralPieChart.class.getName());
+	private static final Logger logger = LogManager.getLogger(GeneralPieChart.class.getName());
 	
 	private static final String FILE_TYPE_PNG = ".png";
 	private static final String FILE_TYPE_JPEG = ".jpg";

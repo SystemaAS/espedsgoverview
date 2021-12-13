@@ -3,7 +3,7 @@
  */
 package no.systema.overview.ufortolledeoppdrag.controller.ajax;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 public class UoppdragAjaxHandlerController {
-	private static final Logger logger = Logger.getLogger(UoppdragAjaxHandlerController.class.getName());
+	private static final Logger logger = LogManager.getLogger(UoppdragAjaxHandlerController.class.getName());
 	
 	@RequestMapping(value = "helloUoppdragAjaxHandler.do", method={RequestMethod.GET, RequestMethod.POST})
 	public @ResponseBody String getMessage(@RequestParam String id, HttpSession session) {

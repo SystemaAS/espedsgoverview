@@ -7,7 +7,7 @@ package no.systema.overview.mapper;
 import java.util.Collection;
 
 //jackson library
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import no.systema.main.mapper.jsonjackson.general.ObjectMapperAbstractGrandFather;
 //application library
@@ -19,7 +19,7 @@ import no.systema.overview.model.JsonCustomerRecord;
  * 
  */
 public class CustomerMapper extends ObjectMapperAbstractGrandFather{
-	private static final Logger logger = Logger.getLogger(CustomerMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(CustomerMapper.class.getName());
 	
 	public JsonCustomerContainer getContainer(String utfPayload) throws Exception{
 		//At this point we now have an UTF-8 payload

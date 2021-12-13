@@ -6,7 +6,7 @@ package no.systema.overview.ufortolledeoppdrag.util.manager;
 import java.lang.reflect.Field;
 import java.util.*;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 import no.systema.overview.ufortolledeoppdrag.controller.UoppdragController;
 import no.systema.overview.ufortolledeoppdrag.filter.SearchFilterUoppdrag;
@@ -26,7 +26,7 @@ import no.systema.overview.ufortolledeoppdrag.model.jsonjackson.JsonTopicRecord;
  * 
  */
 public class SearchFilterMgr {
-	private static final Logger logger = Logger.getLogger(SearchFilterMgr.class.getName());
+	private static final Logger logger = LogManager.getLogger(SearchFilterMgr.class.getName());
 	
 	/**
 	 * Returns a filtered list (if any)

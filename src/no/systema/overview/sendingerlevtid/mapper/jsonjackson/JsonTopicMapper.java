@@ -10,7 +10,7 @@ import no.systema.overview.sendingerlevtid.model.jsonjackson.JsonTopicContainer;
 import no.systema.overview.sendingerlevtid.model.jsonjackson.JsonTopicRecord;
 
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.*;
 
 /**
  * @author oscardelatorre
@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
  * 
  */
 public class JsonTopicMapper extends ObjectMapperAbstractGrandFather {
-	private static final Logger logger = Logger.getLogger(JsonTopicMapper.class.getName());
+	private static final Logger logger = LogManager.getLogger(JsonTopicMapper.class.getName());
 	
 	/**
 	 * 
