@@ -2,7 +2,7 @@ package no.systema.overview.ufortolledeoppdrag.controller;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,7 +46,7 @@ import no.systema.overview.ufortolledeoppdrag.util.UoppdragConstants;
 @Controller
 public class UoppdragRenderController {
 	
-	private static final Logger logger = LogManager.getLogger(UoppdragRenderController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(UoppdragRenderController.class.getName());
 	private JsonDebugger jsonDebugger = new JsonDebugger();
 	
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
@@ -133,7 +133,7 @@ public class UoppdragRenderController {
 		    		successView.addObject(UoppdragConstants.DOMAIN_MODEL, model);
 		    		
 		    	}else{
-				logger.fatal("NO CONTENT on jsonPayload from URL... ??? <Null>");
+				logger.error("NO CONTENT on jsonPayload from URL... ??? <Null>");
 				return loginView;
 			}
 			

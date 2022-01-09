@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 /**
  * @author oscardelatorre
@@ -17,7 +17,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class SearchFilterGateChart extends SearchFilterUoppdrag {
-	//private static final Logger logger = LogManager.getLogger(SearchFilterGateChart.class.getName());
+	//private static final Logger logger = LoggerFactory.getLogger(SearchFilterGateChart.class.getName());
 	
 	private String autoRefresh = null;
 	public void setAutoRefresh(String value) {  this.autoRefresh = value; }

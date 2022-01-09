@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +33,7 @@ import no.systema.overview.util.io.FileManager;
 @SessionAttributes(AppConstants.SYSTEMA_WEB_USER_KEY)
 @Scope("session")
 public class LogoutUoppdragController {
-	private static final Logger logger = LogManager.getLogger(LogoutUoppdragController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(LogoutUoppdragController.class.getName());
 	private SessionMgr sessionMgr = new SessionMgr();
 	
 	private ModelAndView successView = new ModelAndView("dashboard");

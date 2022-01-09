@@ -2,7 +2,7 @@ package no.systema.overview.ufortolledeoppdrag.controller;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.ui.ModelMap;
 
@@ -39,7 +39,7 @@ import javax.servlet.http.*;
 
 @Controller
 public class JFreeChartTesterController {
-	private static final Logger logger = LogManager.getLogger(JFreeChartTesterController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(JFreeChartTesterController.class.getName());
 	
 	
 	@RequestMapping(value="imgPieChart.do", method={RequestMethod.GET})

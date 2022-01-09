@@ -5,7 +5,7 @@ package no.systema.overview.ufortolledeoppdrag.util.jfreechart.manager;
 
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 import no.systema.overview.ufortolledeoppdrag.model.jsonjackson.JsonTopicRecordDiagramChart;
 import no.systema.overview.ufortolledeoppdrag.model.jsonjackson.JsonTopicRecord;
@@ -21,7 +21,7 @@ import no.systema.overview.ufortolledeoppdrag.model.jsonjackson.JsonTopicRecord;
  * 
  */
 public class JFreeChartDynamicBarDimensionMgr implements IJFreeChartDimension{
-	private static final Logger logger = LogManager.getLogger(JFreeChartDynamicBarDimensionMgr.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(JFreeChartDynamicBarDimensionMgr.class.getName());
 	
 	private final String COLOR_GRAY="gray";
 	private final String COLOR_GREY="grey";

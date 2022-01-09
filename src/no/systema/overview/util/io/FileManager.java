@@ -5,7 +5,7 @@ package no.systema.overview.util.io;
 
 import java.io.File;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 /**
  * @author oscardelatorre
@@ -13,7 +13,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class FileManager {
-	private static final Logger logger = LogManager.getLogger(FileManager.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(FileManager.class.getName());
 	public static final String JFREE_CHARTS_ROOT_DIRECTORY = "/WEB-INF/resources/tmpCharts";
 	
 	/**

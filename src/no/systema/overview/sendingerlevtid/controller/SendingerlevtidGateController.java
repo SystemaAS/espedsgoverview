@@ -3,7 +3,7 @@ package no.systema.overview.sendingerlevtid.controller;
 import java.io.File;
 import java.util.*;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.ServletRequestDataBinder;
@@ -48,7 +48,7 @@ import no.systema.main.util.JsonDebugger;
 
 @Controller
 public class SendingerlevtidGateController {
-	private static final Logger logger = LogManager.getLogger(SendingerlevtidGateController.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(SendingerlevtidGateController.class.getName());
 	private ModelAndView loginView = new ModelAndView("redirect:logout.do");
 	private JsonDebugger jsonDebugger = new JsonDebugger();
 	/**

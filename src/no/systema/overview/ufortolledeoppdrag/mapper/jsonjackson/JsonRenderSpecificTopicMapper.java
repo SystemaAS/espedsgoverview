@@ -9,7 +9,7 @@ import no.systema.main.mapper.jsonjackson.general.ObjectMapperAbstractGrandFathe
 import no.systema.overview.ufortolledeoppdrag.model.jsonjackson.JsonRenderSpecificTopicContainer;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 /**
  * @author oscardelatorre
@@ -17,7 +17,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class JsonRenderSpecificTopicMapper extends ObjectMapperAbstractGrandFather{
-	private static final Logger logger = LogManager.getLogger(JsonRenderSpecificTopicMapper.class.getName());
+	private static final Logger logger = LoggerFactory.getLogger(JsonRenderSpecificTopicMapper.class.getName());
 	
 	/**
 	 * 

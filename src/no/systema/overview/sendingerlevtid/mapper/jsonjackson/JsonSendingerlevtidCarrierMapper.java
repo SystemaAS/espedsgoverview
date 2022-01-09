@@ -10,7 +10,7 @@ import no.systema.overview.sendingerlevtid.model.jsonjackson.carrier.JsonSending
 import no.systema.overview.sendingerlevtid.model.jsonjackson.carrier.JsonSendingerlevtidCarrierRecord;
 
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 /**
  * @author oscardelatorre
@@ -18,7 +18,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class JsonSendingerlevtidCarrierMapper extends ObjectMapperAbstractGrandFather {
-private static final Logger logger = LogManager.getLogger(JsonTopicMapper.class.getName());
+private static final Logger logger = LoggerFactory.getLogger(JsonTopicMapper.class.getName());
 	
 	/**
 	 * 

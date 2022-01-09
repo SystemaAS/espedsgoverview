@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.logging.log4j.*;
+import org.slf4j.*;
 
 /**
  * @author oscardelatorre
@@ -18,7 +18,7 @@ import org.apache.logging.log4j.*;
  * 
  */
 public class SearchFilterUoppdrag{
-	//private static final Logger logger = LogManager.getLogger(SearchFilterUoppdrag.class.getName());
+	//private static final Logger logger = LoggerFactory.getLogger(SearchFilterUoppdrag.class.getName());
 	
 	private String dato = null;
 	public void setDato(String value) {  this.dato = value; }
